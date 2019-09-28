@@ -1,4 +1,5 @@
 const express = require('express')
+const gravatar = require('gravatar')
 
 const router = express.Router()
 const { check, validationResult } = require('express-validator')
@@ -32,6 +33,19 @@ router.post(
       if (user) {
         res.status(400).json({ errors: [{ msg: 'User already exists' }] })
       }
+
+      const avatar = gravatar.url(email, {
+        s: '200',
+        r: 'pg',
+        d: 'mp'
+      })
+
+      user = new User({
+        name,
+        email,
+        avatar,
+        password
+      })
 
       res.send('User route')
     } catch (err) {
