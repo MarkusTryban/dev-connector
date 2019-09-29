@@ -84,6 +84,8 @@ router.post(
           { $set: profileFields },
           { new: true }
         )
+
+        return res.json(profile)
       }
     } catch (err) {
       console.error(err.message)
