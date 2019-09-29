@@ -74,6 +74,21 @@ router.post(
     if (facebook) profileFields.socal.facebook = facebook
     if (linkedin) profileFields.socal.linkedin = linkedin
     if (instagram) profileFields.socal.instagram = instagram
+
+    try {
+      let profile = await Profile.findOne({ user: req.user.id })
+
+      if (profile) {
+        profile = await Profile.findOneAndUpdate(
+          { user: req.user.id },
+          { $set: profileFields },
+          { new: true }
+        )
+      }
+    } catch (err) {
+      console.error(err.message)
+      res.status(500).send('Server error')
+    }
   }
 )
 
