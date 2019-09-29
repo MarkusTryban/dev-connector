@@ -67,6 +67,13 @@ router.post(
     if (skills) {
       profileFields.skills = skills.split(',').map(skill => skill.trim())
     }
+
+    profileFields.socal = {}
+    if (youtube) profileFields.socal.youtube = youtube
+    if (twitter) profileFields.socal.twitter = twitter
+    if (facebook) profileFields.socal.facebook = facebook
+    if (linkedin) profileFields.socal.linkedin = linkedin
+    if (instagram) profileFields.socal.instagram = instagram
   }
 )
 
