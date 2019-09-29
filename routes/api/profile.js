@@ -1,4 +1,5 @@
 const express = require('express')
+const { check, validationResult } = require('express-validator')
 const auth = require('../../middleware/auth')
 const Profile = require('../../models/Profile')
 const User = require('../../models/User')
@@ -20,5 +21,7 @@ router.get('/me', auth, async (req, res) => {
     res.status(500).send('Server error')
   }
 })
+
+router.post('/', (req, res) => {})
 
 module.exports = router
