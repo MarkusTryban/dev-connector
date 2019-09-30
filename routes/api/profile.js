@@ -82,7 +82,7 @@ router.post(
         profile = await Profile.findOneAndUpdate(
           { user: req.user.id },
           { $set: profileFields },
-          { new: true, useFindAndModify: false }
+          { new: true }
         )
 
         return res.json(profile)
