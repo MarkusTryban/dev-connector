@@ -221,10 +221,10 @@ router.put(
   [
     auth,
     [
-      check('school', 'school is required')
+      check('school', 'School is required')
         .not()
         .isEmpty(),
-      check('Degree', 'Degree is required')
+      check('degree', 'Degree is required')
         .not()
         .isEmpty(),
       check('fieldofstudy', 'Field of study is required')
