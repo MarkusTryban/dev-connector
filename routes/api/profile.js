@@ -151,7 +151,7 @@ router.put(
       check('company', 'Company is required')
         .not()
         .isEmpty(),
-      check('form', 'Form date is required')
+      check('from', 'From date is required')
         .not()
         .isEmpty()
     ]
