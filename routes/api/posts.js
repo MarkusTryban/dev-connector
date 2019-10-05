@@ -67,11 +67,7 @@ router.get('/:id', auth, async (req, res) => {
   } catch (err) {
     console.error(err.message)
 
-<<<<<<< HEAD
     if (err.kind === 'ObjectId') {
-=======
-    if (!post) {
->>>>>>> 76a466a689b97dd1a94eceb7f2b2cf6d4b434fbd
       return res.status(404).json({ msg: 'Post not found' })
     }
 
