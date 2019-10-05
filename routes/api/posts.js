@@ -133,6 +133,12 @@ router.put('/unlike/:id', auth, async (req, res) => {
       return res.status(400).json({ msg: 'Post has not been liked' })
     }
 
+    const removeIndex = post.likes
+      .map(like => like.user.toString())
+      .indexOf(req.user.id)
+
+    post.likes.splice(removeIndex, 1)
+
     await post.save()
 
     res.json(post.likes)
