@@ -23,6 +23,15 @@ router.post(
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() })
     }
+
+    const user = await User.findById(req.user.id).select('-passward')
+
+    const newPost = {
+      text: req.body.test,
+      name: user.name,
+      avatar: user.avatar,
+      user: req.user.id
+    }
   }
 )
 
