@@ -190,6 +190,10 @@ router.post(
 router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.id)
+
+    const comment = post.comments.find(
+      comment => comment.id === req.params.comment_id
+    )
   } catch (err) {
     console.error(err.message)
     res.status(500).send('Sever error')
