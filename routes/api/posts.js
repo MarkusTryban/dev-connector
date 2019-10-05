@@ -194,6 +194,10 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
     const comment = post.comments.find(
       comment => comment.id === req.params.comment_id
     )
+
+    if (!comment) {
+      return res.status(404).json({ msg: 'Comment does not exist' })
+    }
   } catch (err) {
     console.error(err.message)
     res.status(500).send('Sever error')
