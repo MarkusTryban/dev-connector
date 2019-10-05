@@ -28,7 +28,7 @@ router.post(
       const user = await User.findById(req.user.id).select('-passward')
 
       const newPost = {
-        text: req.body.test,
+        text: req.body.text,
         name: user.name,
         avatar: user.avatar,
         user: req.user.id
