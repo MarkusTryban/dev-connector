@@ -187,4 +187,13 @@ router.post(
   }
 )
 
+router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id)
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).send('Sever error')
+  }
+})
+
 module.exports = router
