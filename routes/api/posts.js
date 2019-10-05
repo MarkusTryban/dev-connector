@@ -89,8 +89,8 @@ router.delete('/:id', auth, async (req, res) => {
   } catch (err) {
     console.error(err.message)
 
-    if (this.post.user.toString() !== req.user.id) {
-      return res.status(401).json({ msg: 'User not authorized' })
+    if (err.kind === 'ObjectId') {
+      return res.status(404).json({ msg: 'Post not found' })
     }
 
     res.status(500).send('Server error')
