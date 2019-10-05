@@ -177,7 +177,7 @@ router.post(
 
       post.comments.unshift(newComment)
 
-      await Post.save()
+      await post.save()
 
       res.json(post.comments)
     } catch (err) {
