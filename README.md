@@ -1,6 +1,7 @@
 # Dev-Connector
 
-> Small social network app built with the MERN stack.
+> Small social network app built with Node.js, Express, React, Redux & MongoDB.
+
 ## Quick Start
 
 ```bash
