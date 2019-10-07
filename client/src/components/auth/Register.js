@@ -31,7 +31,14 @@ const Register = () => {
           />
         </div>
         <div className="form-group">
-          <input type="email" placeholder="Email Address" name="email" />
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            value={email}
+            onChange={e => onChange(e)}
+            required
+          />
           <small className="form-text">
             This site uses Gravatar so if you want a profile image, use a
             Gravatar email
@@ -42,6 +49,9 @@ const Register = () => {
             type="password"
             placeholder="Password"
             name="password"
+            value={password}
+            onChange={e => onChange(e)}
+            required
             minLength="6"
           />
         </div>
@@ -50,6 +60,9 @@ const Register = () => {
             type="password"
             placeholder="Confirm Password"
             name="password2"
+            value={password2}
+            onChange={e => onChange(e)}
+            required
             minLength="6"
           />
         </div>
