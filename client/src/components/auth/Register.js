@@ -14,7 +14,7 @@ const Register = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
 
   const onSubmit = e => {
-    e.preventdefault()
+    e.preventDefault()
 
     if (password !== password2) {
       console.log('Passwords do not match')
