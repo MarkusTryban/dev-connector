@@ -9,6 +9,7 @@
     "react/jsx-fragments": 0,
     "react/self-closing-comp": 0,
     "react/no-unescaped-entities": 0,
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+    "react/prop-types": 0
   }
 }
