@@ -1,6 +1,7 @@
 import { REGISTER_SUCCESS, REGISTER_FAIL } from '../actions/types'
 
 const initialState = {
+  // eslint-disable-next-line no-undef
   token: localStorage.getItem('token'),
   isAuthenticated: null,
   loading: true,
@@ -12,6 +13,7 @@ export default function(state = initialState, action) {
 
   switch (type) {
     case REGISTER_SUCCESS:
+      // eslint-disable-next-line no-undef
       localStorage.setItem('token', payload.token)
       return {
         ...state,
@@ -20,6 +22,7 @@ export default function(state = initialState, action) {
         loading: false
       }
     case REGISTER_FAIL:
+      // eslint-disable-next-line no-undef
       localStorage.removeItem('token')
       return {
         ...state,
