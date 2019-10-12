@@ -1,6 +1,19 @@
 import axios from 'axios'
 import { setAlert } from './alert'
-import { REGISTER_SUCCESS, REGISTER_FAIL } from './types'
+import {
+  REGISTER_SUCCESS,
+  REGISTER_FAIL,
+  USER_LOADED,
+  AUTH_ERROR
+} from './types'
+import setAuthToken from '../utils/setAuthToken'
+
+// Load user
+export const loadUser = () => async dispatch => {
+  if (loacalStorage.token) {
+    setAuthToken(localStorage.token)
+  }
+}
 
 // Register user
 export const register = ({ name, email, password }) => async dispatch => {
