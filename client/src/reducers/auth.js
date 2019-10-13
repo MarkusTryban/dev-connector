@@ -34,6 +34,7 @@ export default function(state = initialState, action) {
         loading: false
       }
     case REGISTER_FAIL:
+    case AUTH_ERROR:
       // eslint-disable-next-line no-undef
       localStorage.removeItem('token')
       return {
