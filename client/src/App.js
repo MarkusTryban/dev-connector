@@ -8,7 +8,16 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Alert from './components/layout/Alert'
 import store from './store'
+import { loadUser } from './actions/auth'
+
 import './App.css'
+import setAuthToken from './utils/setAuthToken'
+
+// eslint-disable-next-line no-undef
+if (localStorage.token) {
+  // eslint-disable-next-line no-undef
+  setAuthToken(localStorage.token)
+}
 
 const App = () => (
   <Provider store={store}>
