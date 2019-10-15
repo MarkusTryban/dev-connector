@@ -6,7 +6,6 @@ import {
 } from '../actions/types'
 
 const initialState = {
-  // eslint-disable-next-line no-undef
   token: localStorage.getItem('token'),
   isAuthenticated: null,
   loading: true,
