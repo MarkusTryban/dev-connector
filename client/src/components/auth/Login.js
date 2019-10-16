@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
 
+// eslint-disable-next-line no-shadow
 const Login = ({ login }) => {
   const [formData, setFormData] = useState({
     email: '',
