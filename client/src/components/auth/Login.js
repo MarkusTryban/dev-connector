@@ -65,7 +65,8 @@ const Login = ({ login, isAuthenticated }) => {
 
 Login.propTypes = {
   login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool.isRequired
+  // eslint-disable-next-line react/require-default-props
+  isAuthenticated: PropTypes.bool
 };
 
 const mapStateToProps = state => ({
