@@ -13,7 +13,7 @@ import setAuthToken from '../utils/setAuthToken';
 // Load user
 export const loadUser = () => async dispatch => {
   // eslint-disable-next-line no-undef
-  if (loacalStorage.token) {
+  if (localStorage.token) {
     // eslint-disable-next-line no-undef
     setAuthToken(localStorage.token);
   }
