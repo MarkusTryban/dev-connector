@@ -1,9 +1,9 @@
-import React, { Fragment, useState } from 'react'
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
-import { setAlert } from '../../actions/alert'
-import { register } from '../../actions/auth'
+import React, { Fragment, useState } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { setAlert } from '../../actions/alert';
+import { register } from '../../actions/auth';
 
 // eslint-disable-next-line no-shadow
 const Register = ({ setAlert, register }) => {
@@ -12,22 +12,22 @@ const Register = ({ setAlert, register }) => {
     email: '',
     password: '',
     password2: ''
-  })
+  });
 
-  const { name, email, password, password2 } = formData
+  const { name, email, password, password2 } = formData;
 
   const onChange = e =>
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = e => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (password !== password2) {
-      setAlert('Passwords do not match', 'danger')
+      setAlert('Passwords do not match', 'danger');
     } else {
-      register({ name, email, password })
+      register({ name, email, password });
     }
-  }
+  };
 
   return (
     <Fragment>
@@ -88,15 +88,15 @@ const Register = ({ setAlert, register }) => {
         Already have an account? <Link to="/login">Sign In</Link>
       </p>
     </Fragment>
-  )
-}
+  );
+};
 
 Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
   register: PropTypes.func.isRequired
-}
+};
 
 export default connect(
   null,
   { setAlert, register }
-)(Register)
+)(Register);
