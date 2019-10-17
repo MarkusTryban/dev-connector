@@ -98,7 +98,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
   register: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool.isRequired
+  // eslint-disable-next-line react/require-default-props
+  isAuthenticated: PropTypes.bool
 };
 
 const mapStateToProps = state => ({
