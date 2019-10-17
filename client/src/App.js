@@ -1,28 +1,28 @@
-import React, { Fragment, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { Provider } from 'react-redux'
+import React, { Fragment, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import Navbar from './components/layout/Navbar'
-import Landing from './components/layout/Landing'
-import Register from './components/auth/Register'
-import Login from './components/auth/Login'
-import Alert from './components/layout/Alert'
-import store from './store'
-import { loadUser } from './actions/auth'
-import setAuthToken from './utils/setAuthToken'
+import Navbar from './components/layout/Navbar';
+import Landing from './components/layout/Landing';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
+import Alert from './components/layout/Alert';
+import store from './store';
+import { loadUser } from './actions/auth';
+import setAuthToken from './utils/setAuthToken';
 
-import './App.css'
+import './App.css';
 
 // eslint-disable-next-line no-undef
 if (localStorage.token) {
   // eslint-disable-next-line no-undef
-  setAuthToken(localStorage.token)
+  setAuthToken(localStorage.token);
 }
 
 const App = () => {
   useEffect(() => {
-    store.dispatch(loadUser())
-  }, [])
+    store.dispatch(loadUser());
+  }, []);
 
   return (
     <Provider store={store}>
@@ -40,7 +40,7 @@ const App = () => {
         </Fragment>
       </Router>
     </Provider>
-  )
-}
+  );
+};
 
-export default App
+export default App;
