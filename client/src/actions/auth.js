@@ -13,8 +13,10 @@ import setAuthToken from '../utils/setAuthToken';
 
 // Load user
 export const loadUser = () => async dispatch => {
+  // eslint-disable-next-line no-undef
   if (localStorage.token) {
     try {
+      // eslint-disable-next-line no-undef
       setAuthToken(localStorage.token);
       const res = await axios.get('/api/auth');
       dispatch({
