@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentProfile } from '../../actions/profile';
 
+// eslint-disable-next-line no-shadow
 const Dashboard = ({ getCurrentProfile, auth, profile }) => {
   useEffect(() => {
     getCurrentProfile();
