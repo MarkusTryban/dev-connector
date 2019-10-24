@@ -22,6 +22,11 @@ const Dashboard = ({
       <p className="lead">
         <i className="fas fa-user"></i> Welcome {user && user.name}
       </p>
+      {profile !== null ? (
+        <Fragment>has</Fragment>
+      ) : (
+        <Fragment>has not</Fragment>
+      )}
     </Fragment>
   );
 };
