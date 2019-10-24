@@ -7,14 +7,23 @@ import { getCurrentProfile } from '../../actions/profile';
 const Dashboard = ({
   // eslint-disable-next-line no-shadow
   getCurrentProfile,
-  auth,
+  auth: { user },
   profile: { profile, loading }
 }) => {
   useEffect(() => {
     getCurrentProfile();
   }, []);
 
-  return loading && profile === null ? <Spinner /> : <Fragment>test</Fragment>;
+  return loading && profile === null ? (
+    <Spinner />
+  ) : (
+    <Fragment>
+      <h1 className="large text-primary">Dashboard</h1>
+      <p className="lead">
+        <i className="fas fa-user"></i> Welcome {user && user.name}
+      </p>
+    </Fragment>
+  );
 };
 
 Dashboard.propTypes = {
