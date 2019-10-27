@@ -58,11 +58,12 @@ const CreateProfile = ({ createProfile, history }) => {
         <div className="form-group">
           <select name="status" value={status} onChange={e => onChange(e)}>
             <option value="0">* Select Professional Status</option>
-            <option value="Developer">Developer</option>
-            <option value="Junior Developer">Junior Developer</option>
-            <option value="Senior Developer">Senior Developer</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Junior Engineer">Junior Engineer</option>
+            <option value="Senior Engineer">Senior Engineer</option>
+            <option value="Tech Lead">Tech Lead</option>
             <option value="Manager">Manager</option>
-            <option value="Student or Learning">Student or Learning</option>
+            <option value="Student">Student</option>
             <option value="Instructor">Instructor or Teacher</option>
             <option value="Intern">Intern</option>
             <option value="Other">Other</option>
@@ -104,7 +105,7 @@ const CreateProfile = ({ createProfile, history }) => {
             onChange={e => onChange(e)}
           />
           <small className="form-text">
-            City & state suggested (eg. Boston, MA)
+            City & state suggested (eg. Miami, FL)
           </small>
         </div>
         <div className="form-group">
