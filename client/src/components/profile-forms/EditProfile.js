@@ -8,6 +8,7 @@ const EditProfile = ({
   profile: { profile, loading },
   // eslint-disable-next-line no-shadow
   createProfile,
+  // eslint-disable-next-line no-shadow
   getCurrentProfile,
   history
 }) => {
