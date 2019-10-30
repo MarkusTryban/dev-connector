@@ -71,7 +71,17 @@ const AddExperience = props => {
         </div>
         <div className="form-group">
           <p>
-            <input type="checkbox" name="current" value="" /> Current Job
+            <input
+              type="checkbox"
+              name="current"
+              checked={current}
+              value={current}
+              onChange={() => {
+                setFormData({ ...formData, current: !current });
+                toggleDisabled(!toDateDisabled);
+              }}
+            />{' '}
+            Current Job
           </p>
         </div>
         <div className="form-group">
