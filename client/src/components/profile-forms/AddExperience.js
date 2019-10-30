@@ -86,7 +86,13 @@ const AddExperience = props => {
         </div>
         <div className="form-group">
           <h4>To Date</h4>
-          <input type="date" name="to" value={to} onChange={e => onChange(e)} />
+          <input
+            type="date"
+            name="to"
+            value={to}
+            onChange={e => onChange(e)}
+            disabled={toDateDisabled ? 'disable' : ''}
+          />
         </div>
         <div className="form-group">
           <textarea
