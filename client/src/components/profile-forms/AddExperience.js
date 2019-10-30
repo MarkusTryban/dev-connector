@@ -32,17 +32,42 @@ const AddExperience = props => {
       <small>* = required field</small>
       <form className="form">
         <div className="form-group">
-          <input type="text" placeholder="* Job Title" name="title" required />
+          <input
+            type="text"
+            placeholder="* Job Title"
+            name="title"
+            value={title}
+            onChange={e => onChange(e)}
+            required
+          />
         </div>
         <div className="form-group">
-          <input type="text" placeholder="* Company" name="company" required />
+          <input
+            type="text"
+            placeholder="* Company"
+            name="company"
+            value={company}
+            onChange={e => onChange(e)}
+            required
+          />
         </div>
         <div className="form-group">
-          <input type="text" placeholder="Location" name="location" />
+          <input
+            type="text"
+            placeholder="Location"
+            name="location"
+            value={location}
+            onChange={e => onChange(e)}
+          />
         </div>
         <div className="form-group">
           <h4>From Date</h4>
-          <input type="date" name="from" />
+          <input
+            type="date"
+            name="from"
+            value={from}
+            onChange={e => onChange(e)}
+          />
         </div>
         <div className="form-group">
           <p>
