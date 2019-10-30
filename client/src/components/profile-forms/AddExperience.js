@@ -15,6 +15,10 @@ const AddExperience = props => {
     description: ''
   });
 
+  const [toDateDisabled, toggleDisabled] = useState(false);
+
+  const { company, title, location, from, to, current, description } = formData;
+
   return (
     <Fragment>
       <h1 className="large text-primary">Add An Experience</h1>
