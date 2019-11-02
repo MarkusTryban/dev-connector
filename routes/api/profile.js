@@ -1,12 +1,13 @@
 const express = require('express');
 const request = require('request');
 const config = require('config');
-const { check, validationResult } = require('express-validator');
-const auth = require('../../middleware/auth');
-const Profile = require('../../models/Profile');
-const User = require('../../models/User');
 
 const router = express.Router();
+const { check, validationResult } = require('express-validator');
+const auth = require('../../middleware/auth');
+
+const Profile = require('../../models/Profile');
+const User = require('../../models/User');
 
 router.get('/me', auth, async (req, res) => {
   try {
@@ -18,6 +19,8 @@ router.get('/me', auth, async (req, res) => {
     if (!profile) {
       return res.status(400).json({ msg: 'There is no profile for this user' });
     }
+
+    res.json(profile);
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server error');
