@@ -4,6 +4,7 @@ import Moment from 'react-moment';
 
 const Experience = ({ experience }) => {
   const experiences = experience.map(exp => (
+    // eslint-disable-next-line no-underscore-dangle
     <td key={exp._id}>
       <td>{exp.company}</td>
       <td className="hide-sm">{exp.title}</td>
