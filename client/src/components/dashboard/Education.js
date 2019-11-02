@@ -2,18 +2,18 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 
-const Experience = ({ experience }) => {
-  const experiences = experience.map(exp => (
+const Education = ({ education }) => {
+  const educationExp = education.map(edu => (
     // eslint-disable-next-line no-underscore-dangle
-    <tr key={exp._id}>
-      <td>{exp.company}</td>
-      <td className="hide-sm">{exp.title}</td>
+    <tr key={edu._id}>
+      <td>{edu.school}</td>
+      <td className="hide-sm">{edu.degree}</td>
       <td>
-        <Moment format="YYYY/MM/DD">{exp.from}</Moment> -{' '}
-        {exp.to === null ? (
+        <Moment format="YYYY/MM/DD">{edu.from}</Moment> -{' '}
+        {edu.to === null ? (
           ' Now'
         ) : (
-          <Moment format="YYYY/MM/DD">{exp.to}</Moment>
+          <Moment format="YYYY/MM/DD">{edu.to}</Moment>
         )}
       </td>
       <td>
@@ -26,23 +26,23 @@ const Experience = ({ experience }) => {
 
   return (
     <Fragment>
-      <h2 className="my-2">Experience Credentials</h2>
+      <h2 className="my-2">Education Experience</h2>
       <table className="table">
         <thead>
           <tr>
-            <th>Company</th>
-            <th className="hide-sm">Title</th>
+            <th>School</th>
+            <th className="hide-sm">Degree</th>
             <th className="hide-sm">Years</th>
           </tr>
         </thead>
-        <tbody>{experiences}</tbody>
+        <tbody>{educationExp}</tbody>
       </table>
     </Fragment>
   );
 };
 
-Experience.propTypes = {
-  experience: PropTypes.array.isRequired
+Education.propTypes = {
+  education: PropTypes.array.isRequired
 };
 
-export default Experience;
+export default Education;
