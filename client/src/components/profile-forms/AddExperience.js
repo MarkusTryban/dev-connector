@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addExperience } from '../../actions/profile';
 
+// eslint-disable-next-line no-shadow
 const AddExperience = ({ addExperience, history }) => {
   const [formData, setFormData] = useState({
     company: '',
