@@ -4,6 +4,7 @@ import Moment from 'react-moment';
 import { connect } from 'react-redux';
 import { deleteExperience } from '../../actions/profile';
 
+// eslint-disable-next-line no-shadow
 const Experience = ({ experience, deleteExperience }) => {
   const experiences = experience.map(exp => (
     // eslint-disable-next-line no-underscore-dangle
