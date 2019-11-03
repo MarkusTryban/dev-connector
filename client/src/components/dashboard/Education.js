@@ -20,6 +20,7 @@ const Education = ({ education }) => {
       </td>
       <td>
         <button
+          // eslint-disable-next-line no-underscore-dangle
           onClick={() => deleteEducation(edu._id)}
           className="btn btn-danger"
           type="button"
