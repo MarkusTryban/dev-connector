@@ -21,6 +21,7 @@ const Experience = ({ experience, deleteExperience }) => {
       </td>
       <td>
         <button
+          // eslint-disable-next-line no-underscore-dangle
           onClick={() => deleteExperience(exp._id)}
           className="btn btn-danger"
           type="button"
