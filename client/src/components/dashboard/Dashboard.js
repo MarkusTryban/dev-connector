@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import React, { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -9,7 +10,6 @@ import Education from './Education';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 
 const Dashboard = ({
-  // eslint-disable-next-line no-shadow
   getCurrentProfile,
   deleteAccount,
   auth: { user },
