@@ -4,7 +4,8 @@ import Moment from 'react-moment';
 import { connect } from 'react-redux';
 import { deleteEducation } from '../../actions/profile';
 
-const Education = ({ education }) => {
+// eslint-disable-next-line no-shadow
+const Education = ({ education, deleteEducation }) => {
   const educationExp = education.map(edu => (
     // eslint-disable-next-line no-underscore-dangle
     <tr key={edu._id}>
