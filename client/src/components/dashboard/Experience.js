@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
+import { connect } from 'react-redux';
+import { deleteExperience } from '../../actions/profile';
 
-const Experience = ({ experience }) => {
+const Experience = ({ experience, deleteExperience }) => {
   const experiences = experience.map(exp => (
     // eslint-disable-next-line no-underscore-dangle
     <tr key={exp._id}>
@@ -42,7 +44,11 @@ const Experience = ({ experience }) => {
 };
 
 Experience.propTypes = {
-  experience: PropTypes.array.isRequired
+  experience: PropTypes.array.isRequired,
+  deleteExperience: PropTypes.array.isRequired
 };
 
-export default Experience;
+export default connect(
+  null,
+  { deleteExperience }
+)(Experience);
