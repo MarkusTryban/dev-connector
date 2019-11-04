@@ -172,7 +172,9 @@ export const deleteEducation = id => async dispatch => {
 // Delete account & profile
 export const deleteAccount = () => async dispatch => {
   // eslint-disable-next-line no-undef
-  if (window.deleteAccountConfirm('Are you sure? This can NOT be undone!')) {
+  const deleteAccountConfirm = window.confirm;
+
+  if (deleteAccountConfirm('Are you sure? This can NOT be undone!')) {
     try {
       await axios.delete(`/api/profile`);
 
