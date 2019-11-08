@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -20,9 +21,7 @@ import setAuthToken from './utils/setAuthToken';
 
 import './App.css';
 
-// eslint-disable-next-line no-undef
 if (localStorage.token) {
-  // eslint-disable-next-line no-undef
   setAuthToken(localStorage.token);
 }
 
