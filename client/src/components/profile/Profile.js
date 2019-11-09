@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { getProfileById } from '../../actions/profile';
 
 const Profile = ({
+  // eslint-disable-next-line no-shadow
   getProfileById,
   profile: { profile, loading },
   auth,
