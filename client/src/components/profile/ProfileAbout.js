@@ -20,6 +20,7 @@ const ProfileAbout = ({
     <h2 className="text-primary">Skill Set</h2>
     <div className="skills">
       {skills.map((skill, index) => (
+        // eslint-disable-next-line react/no-array-index-key
         <div key={index} className="p-1">
           <i className="fa fa-check" /> {skill}
         </div>
