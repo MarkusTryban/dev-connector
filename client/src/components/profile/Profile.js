@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getProfileById } from '../../actions/profile';
 
-const Profile = props => {
+const Profile = ({
+  getProfileById,
+  profile: { profile, loading },
+  auth,
+  match
+}) => {
+  useEffect(() => {
+    getProfileById(match.params.id);
+  }, [getProfileById]);
+
   return <div>profile test</div>;
 };
 
