@@ -25,8 +25,9 @@ const ProfileItem = ({
         </Link>
       </div>
       <ul>
-        {skills.slice(0, 4).map(skill => (
-          <li key={skill.id} className="text-primary">
+        {skills.slice(0, 4).map((skill, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <li key={index} className="text-primary">
             <i className="fas fa-check"></i> {skill}
           </li>
         ))}
