@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Spinner from '../layout/Spinner';
 import { getProfileById } from '../../actions/profile';
 
 const Profile = ({
@@ -14,7 +15,15 @@ const Profile = ({
     getProfileById(match.params.id);
   }, [getProfileById]);
 
-  return <div>profile test</div>;
+  return (
+    <Fragment>
+      {profile === null || loading ? (
+        <Spinner />
+      ) : (
+        <Fragment>profile test</Fragment>
+      )}
+    </Fragment>
+  );
 };
 
 Profile.propTypes = {
