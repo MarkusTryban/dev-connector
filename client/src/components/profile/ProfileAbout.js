@@ -1,10 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ProfileAbout = props => {
+const ProfileAbout = ({
+  profile: {
+    bio,
+    skills,
+    user: { name }
+  }
+}) => {
   return <div></div>;
 };
 
-ProfileAbout.propTypes = {};
+ProfileAbout.propTypes = {
+  profile: PropTypes.object.isRequired
+};
 
 export default ProfileAbout;
