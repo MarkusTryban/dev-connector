@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -31,7 +32,6 @@ const Profile = ({
           </Link>
           {auth.isAuthenticated &&
             auth.loading === false &&
-            // eslint-disable-next-line no-underscore-dangle
             auth.user._id === profile.user._id && (
               <Link to="/edit-profile" className="btn btn-dark">
                 Edit Profile
