@@ -7,6 +7,7 @@ import { getProfileById } from '../../actions/profile';
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
 import ProfileExperience from './ProfileExperience';
+import ProfileEducation from './ProfileEducation';
 
 const Profile = ({
   // eslint-disable-next-line no-shadow
@@ -52,6 +53,21 @@ const Profile = ({
                 </Fragment>
               ) : (
                 <h4>No experience credentials</h4>
+              )}
+            </div>
+            <div className="profile-edu bg-white p-2">
+              <h2 className="text-primary">Education</h2>
+              {profile.Education.length > 0 ? (
+                <Fragment>
+                  {profile.Education.map(Education => (
+                    <ProfileEducation
+                      key={Education._id}
+                      Education={Education}
+                    />
+                  ))}
+                </Fragment>
+              ) : (
+                <h4>No Education credentials</h4>
               )}
             </div>
           </div>
