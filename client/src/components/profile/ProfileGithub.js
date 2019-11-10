@@ -16,6 +16,7 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
         <Spinner />
       ) : (
         repos.map(repo => (
+          // eslint-disable-next-line no-underscore-dangle
           <div key={repo._id} className="repo bg-white p-1 my-1">
             <div>
               <h4>
