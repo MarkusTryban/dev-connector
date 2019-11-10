@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Spinner from '../layout/Spinner';
 import { getPosts } from '../../actions/post';
+import PostItem from './PostItem';
 
 // eslint-disable-next-line no-shadow
 const Posts = ({ getPosts, post: { posts, loading } }) => {
@@ -9,7 +11,19 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     getPosts();
   }, [getPosts]);
 
-  return <div></div>;
+  return loading ? (
+    <Spinner />
+  ) : (
+    <Fragment>
+      <h1 className="large text-primary">Posts</h1>
+      <p className="fas fa-user"> Welcome to the community</p>
+      <div className="posts">
+        {posts.map(post => (
+          <PostItem key={post._id} post={post} />
+        ))}
+      </div>
+    </Fragment>
+  );
 };
 
 Posts.propTypes = {
