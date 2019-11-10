@@ -57,12 +57,12 @@ const Profile = ({
             </div>
             <div className="profile-edu bg-white p-2">
               <h2 className="text-primary">Education</h2>
-              {profile.Education.length > 0 ? (
+              {profile.education.length > 0 ? (
                 <Fragment>
-                  {profile.Education.map(Education => (
+                  {profile.Education.map(education => (
                     <ProfileEducation
-                      key={Education._id}
-                      Education={Education}
+                      key={education._id}
+                      education={education}
                     />
                   ))}
                 </Fragment>
