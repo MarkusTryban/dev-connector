@@ -1,10 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getGithubRepos } from '../../actions/profile';
 
-const ProfileGithub = props => {
+const ProfileGithub = ({ username, getGithubRepos, repos }) => {
   return <div></div>;
 };
 
-ProfileGithub.propTypes = {};
+ProfileGithub.propTypes = {
+  getGithubRepos: PropTypes.func.isRequired,
+  repos: PropTypes.array.isRequired,
+  username: PropTypes.string.isRequired
+};
 
-export default ProfileGithub;
+const mapStateToProps = state => ({
+  repos: state.props.repos
+});
+
+export default connect(
+  mapStateToProps,
+  { getGithubRepos }
+)(ProfileGithub);
