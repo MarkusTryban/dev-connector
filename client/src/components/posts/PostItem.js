@@ -17,5 +17,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { PostItem }
+  {}
 )(PostItem);
