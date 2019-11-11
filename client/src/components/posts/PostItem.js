@@ -11,7 +11,7 @@ const PostItem = ({
 }) => (
   <div className="post bg-white p-1 my-1">
     <div>
-      <Link to="/profile">
+      <Link to={`/profile/${user}`}>
         <img className="round-img" src={avatar} alt="" />
         <h4>{name}</h4>
       </Link>
@@ -28,7 +28,7 @@ const PostItem = ({
       <button type="button" className="btn btn-light">
         <i className="fas fa-thumbs-down"></i>
       </button>
-      <Link to="/post" className="btn btn-primary">
+      <Link to={`/post/${_id}`} className="btn btn-primary">
         Discussion <span className="comment-count">{comments.length}</span>
       </Link>
       {/* eslint-disable-next-line no-underscore-dangle */}
