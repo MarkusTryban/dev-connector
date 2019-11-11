@@ -21,7 +21,7 @@ const PostItem = ({
         Posted on <Moment format="YYYY/MM/DD">{date}</Moment>{' '}
       </p>
       <button type="button" className="btn btn-light">
-        <i className="fas fa-thumbs-up"></i>
+        <i className="fas fa-thumbs-up"></i>{' '}
         <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
       </button>
       <button type="button" className="btn btn-light">
