@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -30,6 +31,7 @@ const PostItem = ({
       <Link to="/post" className="btn btn-primary">
         Discussion <span className="comment-count">{comments.length}</span>
       </Link>
+      {/* eslint-disable-next-line no-underscore-dangle */}
       {!auth.loading && user === auth.user._id && (
         <button type="button" className="btn btn-danger">
           <i className="fas fa-times"></i>
