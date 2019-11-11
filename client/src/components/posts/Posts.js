@@ -19,6 +19,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
       <p className="fas fa-user"> Welcome to the community</p>
       <div className="posts">
         {posts.map(post => (
+          // eslint-disable-next-line no-underscore-dangle
           <PostItem key={post._id} post={post} />
         ))}
       </div>
