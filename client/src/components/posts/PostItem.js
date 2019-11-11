@@ -22,7 +22,11 @@ const PostItem = ({
       </p>
       <button type="button" className="btn btn-light">
         <i className="fas fa-thumbs-up"></i>
-        <span>{likes.length}</span>
+        <span>
+          {likes.length > 0 && (
+            <span className="comment-count">{likes.length}</span>
+          )}
+        </span>
       </button>
       <button type="button" className="btn btn-light">
         <i className="fas fa-thumbs-down"></i>
