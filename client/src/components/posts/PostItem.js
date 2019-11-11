@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-export const PostItem = ({
+const PostItem = ({
   auth,
   post: { _id, text, name, avatar, user, likes, comments, date }
 }) => (
