@@ -30,9 +30,11 @@ const PostItem = ({
       <Link to="/post" className="btn btn-primary">
         Discussion <span className="comment-count">{comments.length}</span>
       </Link>
-      <button type="button" className="btn btn-danger">
-        <i className="fas fa-times"></i>
-      </button>
+      {!auth.loading && user === auth.user._id && (
+        <button type="button" className="btn btn-danger">
+          <i className="fas fa-times"></i>
+        </button>
+      )}
     </div>
   </div>
 );
