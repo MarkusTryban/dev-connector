@@ -27,6 +27,7 @@ export default function(state = initialState, action) {
       return {
         ...state,
         posts: state.posts.map(post =>
+          // eslint-disable-next-line no-underscore-dangle
           post._id === payload.id
             ? {
                 ...post,
