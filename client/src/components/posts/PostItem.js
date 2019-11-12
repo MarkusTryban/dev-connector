@@ -25,7 +25,7 @@ const PostItem = ({
         Posted on <Moment format="YYYY/MM/DD">{date}</Moment>{' '}
       </p>
       <button
-        onClick={e => addLike(_id)}
+        onClick={() => addLike(_id)}
         type="button"
         className="btn btn-light"
       >
@@ -33,7 +33,7 @@ const PostItem = ({
         <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
       </button>
       <button
-        onClick={e => removeLike(_id)}
+        onClick={() => removeLike(_id)}
         type="button"
         className="btn btn-light"
       >
