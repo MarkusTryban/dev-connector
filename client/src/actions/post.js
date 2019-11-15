@@ -8,7 +8,6 @@ import {
 } from './types';
 import { setAlert } from './alert';
 
-// Get posts
 export const getPosts = () => async dispatch => {
   try {
     const res = await axios.get('/api/posts');
@@ -25,7 +24,6 @@ export const getPosts = () => async dispatch => {
   }
 };
 
-// Add like to post
 export const addLike = id => async dispatch => {
   try {
     const res = await axios.put(`/api/posts/like/${id}`);
@@ -42,7 +40,6 @@ export const addLike = id => async dispatch => {
   }
 };
 
-// Remove like
 export const removeLike = id => async dispatch => {
   try {
     const res = await axios.put(`/api/posts/unlike/${id}`);
@@ -59,7 +56,6 @@ export const removeLike = id => async dispatch => {
   }
 };
 
-// Delete post
 export const deletePost = id => async dispatch => {
   try {
     await axios.delete(`/api/posts/${id}`);
