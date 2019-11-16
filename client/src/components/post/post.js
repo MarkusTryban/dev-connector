@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { getPost } from '../../actions/post';
 
 // eslint-disable-next-line no-shadow
-const post = ({ getPost, post: { post, loading }, match }) => {
+const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {
     getPost(match.params.id);
   }, [getPost]);
@@ -12,7 +12,7 @@ const post = ({ getPost, post: { post, loading }, match }) => {
   return <div></div>;
 };
 
-post.propTypes = {
+Post.propTypes = {
   getPost: PropTypes.func.isRequired,
   post: PropTypes.object.isRequired
 };
@@ -24,4 +24,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { getPost }
-)(post);
+)(Post);
