@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getPost } from '../../actions/post';
 
-const post = ({ getPost }) => {
+// eslint-disable-next-line no-shadow
+const post = ({ getPost, post: { post, loading }, match }) => {
+  useEffect(() => {
+    getPost(match.params.id);
+  }, [getPost]);
+
   return <div></div>;
 };
 
 post.propTypes = {
-  getPost: PropTypes.func.isRequired
+  getPost: PropTypes.func.isRequired,
+  post: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
