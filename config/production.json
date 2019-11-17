@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://user1:nvogZXqLDc28QOR9@dev-connector-trsmu.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "4494aa39e87f900dd14e",
+  "githubSecret": "5030afbed5df234bb62270caffe9e81feb54d375"
+}
