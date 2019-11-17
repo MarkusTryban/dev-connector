@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getPost } from '../../actions/post';
+import Spinner from '../layout/Spinner';
+import PostItem from '../posts/PostItem';
 
 // eslint-disable-next-line no-shadow
 const Post = ({ getPost, post: { post, loading }, match }) => {
@@ -9,7 +11,13 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
     getPost(match.params.id);
   }, [getPost]);
 
-  return <div></div>;
+  return loading || post === null ? (
+    <Spinner />
+  ) : (
+    <Fragment>
+      <PostItem post={post} showActions={false} />
+    </Fragment>
+  );
 };
 
 Post.propTypes = {
