@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getPost } from '../../actions/post';
@@ -15,6 +16,9 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
     <Spinner />
   ) : (
     <Fragment>
+      <Link to='/posts' className='btn'>
+        Back To Posts
+      </Link>
       <PostItem post={post} showActions={false} />
     </Fragment>
   );
