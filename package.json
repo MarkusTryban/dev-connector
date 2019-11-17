@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Developer network",
   "main": "server.js",
+  "engines": {
+    "node": "12.13.0"
+  },
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
@@ -28,6 +31,7 @@
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.1",
+    "node": "^13.1.0",
     "request": "^2.88.0"
   },
   "devDependencies": {
